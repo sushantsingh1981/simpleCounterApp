@@ -13,6 +13,13 @@ incEl.addEventListener("click", ()=>{
     
 })
 
+decEl.addEventListener("click", ()=>{
+
+    peopleEnter -= 1
+    countEl.innerHTML = peopleEnter
+    
+})
+
 saveEl.addEventListener("click", ()=>{
     
    let savePeople = peopleEnter + " - "

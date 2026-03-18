@@ -1,10 +1,91 @@
 .mainDiv{
 
-width: 600px;
-height: 500px;
-border: 2px solid green;
-text-align: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
 margin-left: auto;
 margin-right: auto;
+/* border: 2px solid green; */
+background-color: rgb(126, 221, 126);
+height: 400px;
+width: 600px;
 
+}
+
+#counterDisplayP{
+
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400px;
+  font-style: normal;
+
+    font-size: 30px;
+}
+
+#inc, #dec{
+    width: 50px;
+    border-radius: 50px;
+    background-color: #111;
+    color: whitesmoke;
+}
+
+#btnDiv{
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+    height: 50px;
+}
+
+#saveDiv{
+
+margin-top: 50px;
+
+}
+
+body{
+    
+}
+
+.animated-border {
+  position: relative;
+  background: #111; /* Button background color */
+  color: rgb(0, 0, 0);
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden; /* Ensures the border stays within bounds */
+  z-index: 0;
+}
+
+/* The moving gradient border */
+.animated-border::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  /* Define your colors here */
+  background: conic-gradient(transparent, #0cf, transparent 30%);
+  transition: 0.5s;
+  animation: rotate 4s linear infinite;
+  z-index: -2;
+}
+
+/* Inner cover to create the border effect */
+.animated-border::after {
+  content: '';
+  position: absolute;
+  background: #895fb8; /* Match the button background color */
+  inset: 3px; /* Border thickness */
+  border-radius: 8px; /* Slightly less than parent */
+  z-index: -1;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
 }
