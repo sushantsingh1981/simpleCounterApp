@@ -9,14 +9,14 @@ let peopleEnter = 0
 incEl.addEventListener("click", ()=>{
 
     peopleEnter += 1
-    countEl.innerHTML = peopleEnter
+    countEl.textContent = peopleEnter
     
 })
 
 decEl.addEventListener("click", ()=>{
 
     peopleEnter -= 1
-    countEl.innerHTML = peopleEnter
+    countEl.textContent = peopleEnter
     
 })
 
@@ -24,16 +24,10 @@ saveEl.addEventListener("click", ()=>{
     
    let savePeople = peopleEnter + " - "
   
-    saveTextEl.innerHTML += savePeople
+    saveTextEl.textContent += savePeople
     peopleEnter = 0
-    countEl.innerHTML = peopleEnter
+    countEl.textContent = peopleEnter
 
-
-
-    // let savePeople = peopleEnter + "  "
-    // enteriesEL.innerHTML += savePeople 
-    // peopleEnter = 0
-    // enterEl.textContent = peopleEnter
 
 })
 
